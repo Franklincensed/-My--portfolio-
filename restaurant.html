@@ -5,57 +5,125 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TasteHub Restaurant | Lagos</title>
   <style>
-    body {font-family: Arial, sans-serif; margin:0; background:#fff;}
-    .hero {background:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1200') center/cover; color:white; text-align:center; padding:80px 20px;}
-    .hero h1 {font-size:36px; text-shadow:2px 2px 4px #000;}
-    .btn {background:#E63946; color:white; padding:15px 30px; border-radius:10px; text-decoration:none; font-weight:bold; display:inline-block; margin:10px;}
-    .section {padding:40px 20px; max-width:900px; margin:auto;}
-    .menu-item {display:flex; justify-content:space-between; border-bottom:1px solid #eee; padding:10px 0;}
-    .price {color:#E63946; font-weight:bold;}
+    * {margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif;}
+    body {background:#fff; color:#333;}
+    
+    .hero {
+      background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1200') center/cover;
+      color:white; 
+      text-align:center; 
+      padding:100px 20px;
+    }
+    .hero h1 {font-size:40px; margin-bottom:10px;}
+    .hero p {font-size:18px; margin-bottom:30px;}
+    
+    .btn {
+      background:#E63946; 
+      color:white; 
+      padding:15px 30px; 
+      border-radius:10px; 
+      text-decoration:none; 
+      font-weight:bold; 
+      font-size:16px;
+      display:inline-block; 
+      margin:8px;
+    }
+    .btn-call {background:#000;}
+    
+    .section {padding:50px 20px; max-width:900px; margin:auto;}
+    .section h2 {text-align:center; margin-bottom:30px; font-size:28px;}
+    .category {font-size:22px; color:#E63946; margin:30px 0 15px; border-bottom:2px solid #E63946; padding-bottom:5px;}
+    
+    .menu-item {
+      display:flex; 
+      justify-content:space-between; 
+      border-bottom:1px solid #eee; 
+      padding:15px 0;
+    }
+    .menu-item h3 {margin-bottom:5px;}
+    .menu-item p {font-size:14px; color:#666;}
+    .price {color:#E63946; font-weight:bold; font-size:18px;}
+    
+    .footer-info {
+      text-align:center; 
+      background:#f8f8f8; 
+      padding:40px 20px;
+    }
+    
+    @media(max-width:600px){
+      .hero h1 {font-size:30px;}
+      .menu-item {flex-direction:column;}
+      .price {margin-top:5px;}
+    }
   </style>
 </head>
 <body>
 
   <div class="hero">
     <h1>TasteHub Restaurant</h1>
-    <p>African & Continental Dishes Delivered Fast</p>
-    <a href="https://wa.me/2349164952357?text=Hi, I want to order food from TasteHub" class="btn">Order on WhatsApp</a>
-    <a href="tel:+2349164952357" class="btn" style="background:#000;">Call Us</a>
+    <p>African & Continental Dishes Delivered Fast in Lagos</p>
+    <a href="https://wa.me/2349164952357?text=Hi%20TasteHub,%20I%20want%20to%20order%20food" class="btn">Order on WhatsApp</a>
+    <a href="tel:+2349164952357" class="btn btn-call">Call Us Now</a>
   </div>
 
   <div class="section">
-    <h2 style="text-align:center;">Our Menu</h2>
+    <h2>Our Menu</h2>
     
+    <div class="category">🍛 Rice Dishes</div>
     <div class="menu-item">
-      <div>
-        <h3>Jollof Rice + Chicken</h3>
-        <p>Party Jollof with 2 pieces of chicken</p>
-      </div>
+      <div><h3>Jollof Rice + Chicken</h3><p>Party Jollof with 2 pieces of chicken</p></div>
       <div class="price">₦4,500</div>
     </div>
-
     <div class="menu-item">
-      <div>
-        <h3>Egusi Soup + Poundo</h3>
-        <p>Fresh egusi with beef and fish</p>
-      </div>
+      <div><h3>Fried Rice + Beef</h3><p>Vegetable fried rice with 3 pieces of beef</p></div>
+      <div class="price">₦4,000</div>
+    </div>
+    <div class="menu-item">
+      <div><h3>Coconut Rice + Fish</h3><p>Creamy coconut rice with grilled tilapia</p></div>
+      <div class="price">₦5,500</div>
+    </div>
+
+    <div class="category">🍲 Soups & Swallow</div>
+    <div class="menu-item">
+      <div><h3>Egusi Soup + Poundo</h3><p>Fresh egusi with beef and fish</p></div>
       <div class="price">₦3,500</div>
     </div>
-
     <div class="menu-item">
-      <div>
-        <h3>Grilled Fish + Plantain</h3>
-        <p>Fresh tilapia with pepper sauce</p>
-      </div>
+      <div><h3>Ogbono Soup + Eba</h3><p>Thick ogbono with assorted meat</p></div>
+      <div class="price">₦3,500</div>
+    </div>
+    <div class="menu-item">
+      <div><h3>Vegetable Soup + Amala</h3><p>Ewedu + Gbegiri combo with stew</p></div>
+      <div class="price">₦4,000</div>
+    </div>
+
+    <div class="category">🍗 Grills & Sides</div>
+    <div class="menu-item">
+      <div><h3>Grilled Fish + Plantain</h3><p>Fresh tilapia with pepper sauce</p></div>
       <div class="price">₦5,000</div>
     </div>
+    <div class="menu-item">
+      <div><h3>Chicken & Chips</h3><p>Crispy chicken with fries and coleslaw</p></div>
+      <div class="price">₦3,800</div>
+    </div>
+    <div class="menu-item">
+      <div><h3>Yam + Egg Sauce</h3><p>Boiled yam with spicy egg sauce</p></div>
+      <div class="price">₦2,500</div>
+    </div>
+    <div class="menu-item">
+      <div><h3>Sharwama</h3><p>Loaded chicken sharwama with extra sauce</p></div>
+      <div class="price">₦2,200</div>
+    </div>
+
   </div>
 
-  <div class="section" style="text-align:center; background:#f5f5f5;">
+  <div class="footer-info">
     <h2>We Deliver in Lagos</h2>
-    <p>Open: Mon - Sun | 9am - 10pm</p>
-    <p>Location: 45 Berger Road, Ojodu, Lagos</p>
-    <a href="https://wa.me/2349164952357?text=Hi, I want to order food from TasteHub" class="btn">Message to Order</a>
+    <p><b>Location:</b> 45 Berger Road, Ojodu, Lagos</p>
+    <p><b>Hours:</b> Mon - Sun | 9am - 10pm</p>
+    <p><b>Delivery:</b> Within 45 mins in Ojodu, Berger & Ikeja</p>
+    <br>
+    <a href="https://wa.me/2349164952357?text=Hi%20TasteHub,%20I%20want%20to%20order%20food" class="btn">Message to Order</a>
   </div>
 
 </body>
